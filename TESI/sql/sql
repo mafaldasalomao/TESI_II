@@ -1,0 +1,31 @@
+mysql -u aluno -p
+senha: aluno
+show databases;
+use academico;
+show tables;
+show columns from cursos;
+show columns from alunos;
+select *from cursos;
+insert into alunos values (1, "Macilon",2);
+select *from alunos;
+select *from alunos,cursos;
+select *from alunos inner join cursos on (curso = codigo);
+select a.nome, c.nome from alunos as a  inner join cursos as c on (curso = codigo);
+insert into cursos values (4,"Corte");
+insert into cursos values (5,"Costura");select c.*, a.* from cursos as c left join alunos as a on (c.codigo =a.curso);
+update alunos
+set curso = 5
+where matricula > 20130300000 and matricula <= 20139999999;
+select c.nome, count(*) from alunos as a inner join cursos as c on (a.curso = c.codigo) group by c.nome;
+select * from alunos order by nome;
+select c.codigo, c.nome, count(*) as "Matriculados" from alunos as a inner join cursos as c on (a.curso = c.codigo) group by c.codigo,  c.nome order by c.nome desc;
+alter table alunos add column idade int;
+alter table alunos add column idade int not null default 21;
+select max(idade) from alunos
+select avg(idade) from alunos;
+select sum(idade) from alunos
+select nome,idade , 2018 - idade as "nasceu em" from alunos;
+select * from alunos where nome like "%costa";
+select * from alunos where nome like "S%";
+select * from alunos where nome like "%x%";
+

@@ -1,0 +1,7 @@
+import javax.swing.JFrame;
+
+public class Autenticacao extends JFrame{
+ public Autenticacao() {
+	 
+ }
+}

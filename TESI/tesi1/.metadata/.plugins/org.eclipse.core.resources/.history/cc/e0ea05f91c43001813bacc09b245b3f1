@@ -1,0 +1,9 @@
+
+public class JogoDeCartasApp {
+
+	public static void main(String[] args) {
+		Autenticacao a = new Autenticacao();
+		a.setVisible(true);
+	}
+
+}

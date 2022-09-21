@@ -1,0 +1,39 @@
+import java.awt.CardLayout;
+import java.awt.Color;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JPanel;
+
+
+public class JogoDeCartas extends JFrame{
+	private JPanel pnlCartas, pnlBotoes, pnlCarta1, pnlCarta2, pnlCarta3;
+	private JButton btnPrimeiro, btnProximo,btnAnterior, btnUltimo;
+	
+	
+	JMenuBar mb;
+	JMenu mnCatas,mnAjuda;
+	CardLayout cl;
+
+	public JogoDeCartas() {
+		setTitle("Jogo de Cartas");
+		setSize(500, 300);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setResizable(false);
+		
+		cl = new CardLayout();
+		pnlCartas = new JPanel(cl);
+		pnlCarta1 = new JPanel();
+		pnlCarta1.setBackground(Color.RED);
+		pnlCarta2 = new JPanel();
+		pnlCarta2.setBackground(Color.GREEN);
+		pnlCarta3 = new JPanel();
+		pnlCarta3.setBackground(Color.BLUE);
+		
+		
+		pack();
+	}
+}
